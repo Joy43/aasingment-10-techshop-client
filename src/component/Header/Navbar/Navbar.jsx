@@ -22,8 +22,8 @@ const handleLogout=()=>{
  <li> <NavLink to="/addphone">Add Product</NavLink></li>
     <li> <NavLink to="/signup">Registation</NavLink></li>
     <li> <NavLink to="/login">Login</NavLink></li>
-    <li> <NavLink to="/card">Add to cart</NavLink></li>
-    <li> <NavLink to="/error">programming</NavLink></li>
+    <li> <NavLink to="/addcart">Add to cart</NavLink></li>
+    <li> <NavLink to="/error">404 cheack</NavLink></li>
 
 </div>
     return (

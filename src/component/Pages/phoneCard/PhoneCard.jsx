@@ -11,7 +11,7 @@ const PhoneCard = ({phonecard,setphones,Phones }) => {
 //  ----------------------------show deatils-------------
 
 
-//--------------- edit  delate============
+//--------------- edit  delat-----------
 
 const handleDelete=_id=>{
   console.log(_id);

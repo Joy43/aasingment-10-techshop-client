@@ -11,6 +11,7 @@ import Login from "../src/component/Authall/Login/Login";
 import SignUp from "../src/component/Authall/SignUp/SignUp";
 import ShowDetails from "../src/component/Pages/Showdeatils/Showdeatils";
 import PrivateRouter from "./PrivateRouter";
+import CardList from "../src/component/Pages/CardList/CardList";
 
 
 
@@ -51,7 +52,12 @@ loader:()=>fetch('http://localhost:5000/phone'),
       path:'signup',
       element:<SignUp></SignUp>
 
-     }
+     },
+   {
+    path:'addcart/:id',
+    element:<CardList></CardList>,
+    loader:({params})=>fetch (`http://localhost:5000/phone/${params.id}`),
+   },
      
 
 

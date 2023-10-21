@@ -8,7 +8,7 @@ const PrivateRouter = ({children}) => {
     const {user,load}=useContext(AuthContext)
     
     const location=useLocation();
-console.log(location);
+
     if(load){
         return <Audio
         height="80"

@@ -56,7 +56,7 @@ fetch('http://localhost:5000/phone', {
     <div>
 <h1 className="text-center text-xl mb-4 font-[Rancho] ">Update Phone Details</h1>
 <div>
-<p className="text-center mb-4">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+<p className="text-center mb-4"> All of the phone product adding easily and update .</p>
 </div>
 
 {/* main div */}

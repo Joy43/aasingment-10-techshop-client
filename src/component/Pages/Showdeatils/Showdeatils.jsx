@@ -1,12 +1,14 @@
+
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import CardList from "../CardList/CardList";
+import { Link, useParams } from "react-router-dom";
+
 
 
 const ShowDetails = () => {
   const { id } = useParams();
   const [showDetails, setShowDetails] = useState(null);
-  const [showCardData, setShowCardData] = useState(false);
+ 
+
   useEffect(() => {
     fetch(`http://localhost:5000/phone/${id}`)
       .then((res) => {
@@ -25,10 +27,6 @@ const ShowDetails = () => {
 
   // --------------card list--------------
 
-  const handleShowCardData = () => {
-    setShowCardData(true);
-  };
-
   console.log(showDetails);
   
   return (
@@ -46,20 +44,26 @@ const ShowDetails = () => {
       <div className="badge badge-outline bg-[#152747]">{showDetails.category}</div> 
 
       <div className="badge badge-secondary lowercase">Price: {showDetails.price}$</div>
+      <div className="badge badge-secondary lowercase">{showDetails.rating}</div>
     
             <p className="font-semibold text-white">{showDetails.description}</p>
             <div className="card-actions justify-end">
-            <button className="btn btn-primary" onClick={handleShowCardData}>Add to curt</button>
+
+              <Link  to={`addcart/${id}`}>
+              <button className="btn btn-primary" >Add to curt</button>
+              </Link>
+            
             </div>
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p className=" text-center bg-orange-900" ><span className="loading loading-spinner text-warning text-center text-3xl"></span></p>
       )}
+<div>
 
-{showCardData && (
-    <CardList data={showDetails.cards} />
-  )}
+
+</div>
+
     </div>
   );
 };
