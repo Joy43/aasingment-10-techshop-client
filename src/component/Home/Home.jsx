@@ -5,7 +5,7 @@ import PhoneCard from '../Pages/phoneCard/PhoneCard';
 
 import { useLoaderData } from 'react-router-dom'
 import { useState } from 'react';
-import { FaPhone } from 'react-icons/fa';
+
 const Home = () => {
   const loadedphones=useLoaderData();
  
@@ -19,11 +19,11 @@ console.log(Phones);
 
         <div>
         
-        <h1 className='text-6xl inline-flex text-center my-20
+        {/* <h1 className='text-6xl inline-flex text-center my-20
          transition-transform transform hover:scale-110'><span><FaPhone /></span>
-  Phones iteam: {Phones.length} </h1>
+  Phones iteam: {Phones.length} </h1> */}
 
-    <div className='grid md:grid-cols-3 gap-4' >
+    <div className='grid md:grid-cols-3 gap-4 mt-8' >
     {
 Phones.map( phonecard =>
   <PhoneCard key={ phonecard._id} 

@@ -12,6 +12,8 @@ const{signInWithGoogle}=useContext(AuthContext)
         }
     return (
         <div >
+
+            
             <IconContext.Provider value={{ className: "shared-class", size: 35 }}><button  onClick={handlemanualGoogle}>  <FcGoogle></FcGoogle>  </button> </IconContext.Provider>
            
         </div>

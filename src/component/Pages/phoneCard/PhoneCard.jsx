@@ -7,16 +7,7 @@ const PhoneCard = ({phonecard,setphones,Phones }) => {
 // console.log(phone) 
     const {_id,name,bandname,price,rating,photo,description,category} = phonecard;
 //  ----------------------------show deatils-------------
-// const [showDetails, setShowDetails] = useState(false);
 
-
-// const toggleDetails = () => {
-//   setShowDetails(!showDetails);
-// };
-
-// const closeModal = () => {
-//   setShowDetails(false);
-// };
 
 //--------------- edit  delate============
 
@@ -90,7 +81,7 @@ PhoneCard.propTypes = {
     </div>
 
     <div className="card-actions justify-center flex space-x-4">
-    {/* <button className="btn">View</button> */}
+
     <Link to={`updatePhone/${_id}`}>
       <button className="btn">Update </button>
     </Link>
@@ -99,11 +90,13 @@ PhoneCard.propTypes = {
       className="btn">Delete</button>
   </div>
 
-  <Link to={`showcategory/${_id}`}>
-  <button   className="btn btn-secondary">
+ <div className="justify-center text-center">
+ <Link to={`showcategory/${_id}`}>
+  <button   className="btn btn-secondary text-center">
             View Details
           </button>
   </Link>
+ </div>
   </div>
 
 

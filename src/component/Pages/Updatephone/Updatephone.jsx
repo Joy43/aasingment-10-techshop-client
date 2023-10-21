@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 const Updatephone = () => {
 
     const phoneloader=useLoaderData();
-    const {name,bandname,price,rating,photo,description,category}=phoneloader
+    const {_id,name,bandname,price,rating,photo,description,category}=phoneloader
     
     // ---------------
 
@@ -58,7 +58,7 @@ const Updatephone = () => {
 <h1 className="text-center text-xl mb-4 font-[Rancho] ">Update Phone Details</h1>
 
 {/* main div */}
-<div className="bg-[#E9498C] max-w-4xl p-4  ">
+<div className="bg-[#E9498C] max-w-4xl p-4   ml-3">
 {/* from card */}
 <form onSubmit={handleUpdatePhone} className="w-full  max-w-4x ">
 

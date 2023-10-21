@@ -44,7 +44,7 @@ const handleLogout=()=>{
     </div>
   </div>
   <div className="navbar-center">
-    <a className="btn btn-ghost normal-case text-xl title-animation ">Technology & Electronics</a>
+    <a className="btn btn-ghost normal-case text-xl title-animation italic bg-black ">Technology & Electronics</a>
   </div>
   <div className="navbar-end gap-8">
   {/*------------------ google sign in btn */}

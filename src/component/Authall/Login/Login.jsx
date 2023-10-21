@@ -1,6 +1,6 @@
 
 import {  useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import { BsEyeSlashFill, BsEyeFill } from "react-icons/bs";
 
@@ -10,9 +10,9 @@ import { AuthContext } from "../../../ProviderVarify/Provider";
 
 const Login = () => {
  const {signIn}=useContext(AuthContext)
-//  const location= useLocation();
-//  const navigate =useNavigate()
-//  console.log('location in the login', location )
+ const location= useLocation();
+ const navigate =useNavigate()
+ console.log('location in the login', location )
  const [showPassword, setShowPassword] = useState(false);
  
 
@@ -42,8 +42,9 @@ const Handesign=e=>{
       'success'
     );
   } 
+  // NAVIGATE
   
-  // navigate(location?.state?location.state:'/');
+  navigate(location?.state?location.state:'/');
 })
 
 .catch(error => {
@@ -69,7 +70,7 @@ const Handesign=e=>{
     <Player
   autoplay
   loop
-  src="https://lottie.host/dc3e550f-9d8a-489e-a406-5100acd7dab7/6kFcel9USw.json"
+  src="https://lottie.host/dc750fb7-d19d-4101-8e8b-2e1cbb2fafff/hBBDsjD7yC.json"
   style={{ height: '350px', width: '350px' }}
 >
   <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />

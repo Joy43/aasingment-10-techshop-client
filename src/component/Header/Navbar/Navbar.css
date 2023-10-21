@@ -12,3 +12,8 @@
       opacity: 1;
     }
   }
+  .italic {
+    font-family: "Helvetica Neue", sans-serif; 
+    font-style: italic;
+  }
+  

@@ -9,6 +9,7 @@ import Home from "../src/component/Home/Home";
 import Updatephone from "../src/component/Pages/Updatephone/Updatephone";
 import Login from "../src/component/Authall/Login/Login";
 import SignUp from "../src/component/Authall/SignUp/SignUp";
+import ShowDetails from "../src/component/Pages/Showdeatils/Showdeatils";
 
 
 
@@ -36,6 +37,7 @@ loader:()=>fetch('http://localhost:5000/phone'),
       },
 {
   path:"/showcategory/:id",
+  element:<ShowDetails></ShowDetails>,
   loader:()=>fetch('http://localhost:5000/phone'),
 
 },

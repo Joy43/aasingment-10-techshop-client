@@ -72,7 +72,7 @@ const SignUp = () => {
         <Player
   autoplay
   loop
-  src="https://lottie.host/d04a3d01-3d1f-414e-9f9b-6ed67db314dc/GbQ07PbLde.json"
+  src="https://lottie.host/d6e8f388-0dda-4341-bb1a-646d8ad2feba/oz2mSixqv2.json"
   style={{ height: '450px', width: '350px' }}
 >
   <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
