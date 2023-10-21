@@ -64,10 +64,10 @@ PhoneCard.propTypes = {
 
     return (
         <div>
-           <div    className="card flex relative  w-96 bg-[#8d95e8] shadow-xl">
+           <div className="card flex relative  w-96 bg-[#cccff3] shadow-xl">
   <figure><img src={photo} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title justify-center  text-[#152747] uppercase">
+    <h2 className="card-title justify-center  text-[#0e0f3a] uppercase">
     {name}
     <div className="badge badge-secondar">{bandname}</div>
      

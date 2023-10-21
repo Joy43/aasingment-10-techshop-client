@@ -12,7 +12,7 @@ const ErrorPage = () => {
             <h3 className="text-lg font-medium">Page not found</h3>
           </div>
           <div className="mt-2 mb-4 text-sm">
-            404 ! I can not found this page .Please try to another way.
+           <img src="https://i.ibb.co/S7Dcvnz/404.png" alt="" />
           </div>
           <div className="flex">
           <Link to="/">

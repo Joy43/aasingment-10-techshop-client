@@ -56,7 +56,7 @@ const handleLogout=()=>{
      {/* icon men */}
      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
   <div className="w-10 rounded-full">
-       <img src="https://i.ibb.co/Dzmdwrg/profile.jpg"alt="" />
+       <img src="https://i.ibb.co/SrY6J8W/Pngtree-technology-logo-template-3669876.png"alt="" />
 
        </div>
        
@@ -66,7 +66,7 @@ const handleLogout=()=>{
     user?
     <button  onClick={handleLogout} className="btn"> Sign out </button>
     :
-    <Link to="/login"> <a className="btn">SignIn</a></Link>
+    <Link to="/login"> <a className="btn">Login</a></Link>
 }
   </div>
 </div>

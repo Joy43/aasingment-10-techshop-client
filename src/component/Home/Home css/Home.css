@@ -1,0 +1,30 @@
+
+.light-mode {
+    background-color: rgb(205, 203, 235);
+    color: #ed3b9d; 
+  }
+  
+  .light-mode .phone-card {
+    background-color:  #f4eaea ;
+    color: white;
+  }
+  
+  /* Dark Mode CSS */
+  .dark-mode {
+    background-color: #333; /* Background color for dark mode */
+    color: white; /* Text color for dark mode */
+  }
+  
+  .dark-mode .phone-card {
+   background-color: antiquewhite;
+  }
+  
+  
+  .phone-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    
+  }
+  
+  
+  

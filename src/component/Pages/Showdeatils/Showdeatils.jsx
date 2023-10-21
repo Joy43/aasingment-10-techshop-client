@@ -47,7 +47,7 @@ const ShowDetails = () => {
 
       <div className="badge badge-secondary lowercase">Price: {showDetails.price}$</div>
     
-            <p>{showDetails.description}</p>
+            <p className="font-semibold text-white">{showDetails.description}</p>
             <div className="card-actions justify-end">
             <button className="btn btn-primary" onClick={handleShowCardData}>Add to curt</button>
             </div>
