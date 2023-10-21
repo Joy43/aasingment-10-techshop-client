@@ -1,14 +1,28 @@
 
-import {  NavLink } from "react-router-dom";
+import {  Link, NavLink } from "react-router-dom";
 import './Navbar.css'
+
+import GooogleManual from "../../Authall/GoggleManualvarify/Googlemanual";
+import { useContext } from "react";
+import { AuthContext } from "../../../ProviderVarify/Provider";
 const Navbar = () => {
+
+  // --------------signOut-----------
+  const {user,logOut}=useContext(AuthContext);
+
+const handleLogout=()=>{
+  logOut()
+  .then()
+  .catch()
+}
+
 
     const navlinks=<div className="font-bold text-xl">
  <li> <NavLink to="/">Home</NavLink></li>
- <li> <NavLink to="/addphone">AddPhone</NavLink></li>
-    <li> <NavLink to="/register">Registation</NavLink></li>
+ <li> <NavLink to="/addphone">Add Product</NavLink></li>
+    <li> <NavLink to="/signup">Registation</NavLink></li>
     <li> <NavLink to="/login">Login</NavLink></li>
-    <li> <NavLink to="/card">card</NavLink></li>
+    <li> <NavLink to="/card">Add to cart</NavLink></li>
     <li> <NavLink to="/error">programming</NavLink></li>
 
 </div>
@@ -34,10 +48,10 @@ const Navbar = () => {
   </div>
   <div className="navbar-end gap-8">
   {/*------------------ google sign in btn */}
-{/* <div className="inline-flex gap-2 p-1 relative bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% from-indigo-300">
-<span className=" text-xl text-white font-bold rounded-sm   ">Join with</span>
-<GooogleVarify></GooogleVarify>
-</div> */}
+  <div className="inline-flex gap-2 p-1 relative bg-black">
+<span className=" text-xl text-white font-bold rounded-sm   ">Join Us</span>
+<GooogleManual></GooogleManual>
+</div>
  {/* --------------signout----------------------- */}
      {/* icon men */}
      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -47,13 +61,13 @@ const Navbar = () => {
        </div>
        
       </label>
-{/* {
+{
 
     user?
     <button  onClick={handleLogout} className="btn"> Sign out </button>
     :
     <Link to="/login"> <a className="btn">Login</a></Link>
-} */}
+}
   </div>
 </div>
 

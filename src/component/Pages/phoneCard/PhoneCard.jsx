@@ -1,30 +1,120 @@
+import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
+import PropTypes from 'prop-types';
 
 
-const PhoneCard = ({ Phone }) => {
+const PhoneCard = ({phonecard,setphones,Phones }) => {
 // console.log(phone) 
-    const {name,bandname,price,rating,photo,description,category} = Phone;
-    console.log(Phone);
+    const {_id,name,bandname,price,rating,photo,description,category} = phonecard;
+//  ----------------------------show deatils-------------
+// const [showDetails, setShowDetails] = useState(false);
 
 
-    
+// const toggleDetails = () => {
+//   setShowDetails(!showDetails);
+// };
+
+// const closeModal = () => {
+//   setShowDetails(false);
+// };
+
+//--------------- edit  delate============
+
+const handleDelete=_id=>{
+  console.log(_id);
+  Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        
+      fetch(`http://localhost:5000/phone/${_id}`,{
+        method: 'DELETE'
+      })
+     
+      .then(res => res.json())
+      .then(data=>{
+          console.log(data);
+          if (data.deletedCount > 0) {
+              Swal.fire(
+                  'Deleted!',
+                  'Your coffie has been deleted.',
+                  'success'
+                )
+
+                const reaming =Phones.filter(poh=>poh._id!==_id);
+                setphones(reaming);
+          }
+      })
+      }
+    })
+}
+
+PhoneCard.propTypes = {
+  phonecard: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    bandname: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    rating: PropTypes.number.isRequired,
+    photo: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+  setphones: PropTypes.func.isRequired,
+  Phones: PropTypes.array.isRequired,
+};
+ 
 
     return (
         <div>
-           <div className="card w-96 bg-base-100 shadow-xl">
+           <div    className="card flex relative  w-96 bg-[#8d95e8] shadow-xl">
   <figure><img src={photo} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">
+    <h2 className="card-title justify-center  text-[#152747] uppercase">
     {name}
-      <div className="badge badge-secondary">{price}</div>
-      <div className="badge badge-secondary">{bandname}</div>
+    <div className="badge badge-secondar">{bandname}</div>
+     
+      
     </h2>
-    <p>{description}</p>
-    <div className="card-actions justify-end">
-      <div className="badge badge-outline">{category}</div> 
-      <div className="badge badge-outline">{rating}</div>
+    <p className="text-[#152747] text-center">{description}</p>
+    <div className="card-actions justify-center">
+      <div className="badge badge-outline bg-[#152747]">{category}</div> 
+      <div className="badge badge-outline bg-[#152747]">{rating}</div>
+      <div className="badge badge-secondary lowercase">Price: {price}$</div>
     </div>
+
+    <div className="card-actions justify-center flex space-x-4">
+    {/* <button className="btn">View</button> */}
+    <Link to={`updatePhone/${_id}`}>
+      <button className="btn">Update </button>
+    </Link>
+    <button
+      onClick={() => handleDelete(_id)}
+      className="btn">Delete</button>
   </div>
+
+  <Link to={`showcategory/${_id}`}>
+  <button   className="btn btn-secondary">
+            View Details
+          </button>
+  </Link>
+  </div>
+
+
+
 </div> 
+
+
+
+
+
+
         </div>
     );
 };

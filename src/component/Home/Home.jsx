@@ -5,7 +5,7 @@ import PhoneCard from '../Pages/phoneCard/PhoneCard';
 
 import { useLoaderData } from 'react-router-dom'
 import { useState } from 'react';
-
+import { FaPhone } from 'react-icons/fa';
 const Home = () => {
   const loadedphones=useLoaderData();
  
@@ -19,39 +19,23 @@ console.log(Phones);
 
         <div>
         
-        <h1 className='text-6xl text-center my-20 text-purple-600'>Phones team: {Phones.length}</h1>
-    <div>
+        <h1 className='text-6xl inline-flex text-center my-20
+         transition-transform transform hover:scale-110'><span><FaPhone /></span>
+  Phones iteam: {Phones.length} </h1>
+
+    <div className='grid md:grid-cols-3 gap-4' >
     {
-Phones.map( Phonecard=>{
-  <PhoneCard key={  Phonecard._id} 
-  Phonecard={Phonecard}
+Phones.map( phonecard =>
+  <PhoneCard key={ phonecard._id} 
+  phonecard={phonecard}
   Phones={Phones}
   setphones={setphones}
   
   ></PhoneCard>
 
-})
+)
 }  
-
-
-
-{/* <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src={Phones.photo} alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">
-      Shoes!
-      <div className="badge badge-secondary">NEW</div>
-    </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <div className="badge badge-outline">Fashion</div> 
-      <div className="badge badge-outline">Products</div>
-    </div>
-  </div>
-</div> */}
-
-
-    </div>
+ </div>
 </div>  
 
 
