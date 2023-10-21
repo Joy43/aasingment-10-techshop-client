@@ -47,7 +47,7 @@ console.log(Phones);
         <div className={`grid md:grid-cols-3 p-3 gap-4 mt-8 ${lightModeClass}`}>
     {
 Phones.map( phonecard =>
-  <PhoneCard data-aos="fade-up" key={ phonecard._id} 
+  <PhoneCard key={ phonecard._id} 
   phonecard={phonecard}
   Phones={Phones}
   setphones={setphones}

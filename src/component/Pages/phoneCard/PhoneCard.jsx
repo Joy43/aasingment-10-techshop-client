@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
 import PropTypes from 'prop-types';
-
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import the AOS CSS
 
 const PhoneCard = ({phonecard,setphones,Phones }) => {
 // console.log(phone) 
@@ -62,8 +64,12 @@ PhoneCard.propTypes = {
 };
  
 
+// aos
+useEffect(() => {
+  AOS.refresh();
+}, []);
     return (
-        <div>
+        <div  data-aos="fade-up">
            <div className="card flex relative  w-96 bg-[#cccff3] shadow-xl">
   <figure><img src={photo} alt="Shoes" /></figure>
   <div className="card-body">

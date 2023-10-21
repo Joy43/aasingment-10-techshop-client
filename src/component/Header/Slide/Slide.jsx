@@ -19,11 +19,11 @@ const images = [
     title: 'Google Pixel Phone',
     description: 'Google Pixel, known for its excellent camera and Android experience.',
   },
-  // {
-  //   url:'https://i.ibb.co/VDTVZ6x/Sony-Xperi.jpg',
-  //   title: 'Sony Xperia 1 III ',
-  //   description: 'A slight improvement over its predecessor ofr best experience in android ',
-  // }
+  {
+     url:'https://i.ibb.co/hBNqsZT/apple-airpods-max-1607550567.gif',
+   title: 'Sony Xperia 1 III ',
+     description: 'A slight improvement over its predecessor ofr best experience in android ',
+   }
 ];
 
 function Carousel() {
