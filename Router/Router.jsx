@@ -10,6 +10,7 @@ import Updatephone from "../src/component/Pages/Updatephone/Updatephone";
 import Login from "../src/component/Authall/Login/Login";
 import SignUp from "../src/component/Authall/SignUp/SignUp";
 import ShowDetails from "../src/component/Pages/Showdeatils/Showdeatils";
+import PrivateRouter from "./PrivateRouter";
 
 
 
@@ -37,7 +38,7 @@ loader:()=>fetch('http://localhost:5000/phone'),
       },
 {
   path:"/showcategory/:id",
-  element:<ShowDetails></ShowDetails>,
+  element:<PrivateRouter><ShowDetails></ShowDetails></PrivateRouter>,
   loader:()=>fetch('http://localhost:5000/phone'),
 
 },

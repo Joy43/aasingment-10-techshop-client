@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../src/ProviderVarify/Provider";
 import { useLocation,Navigate } from "react-router-dom";
-
+import { Audio } from 'react-loader-spinner'
 
 const PrivateRouter = ({children}) => {
 
     const {user,load}=useContext(AuthContext)
     
     const location=useLocation();
-
+console.log(location);
     if(load){
         return <Audio
         height="80"

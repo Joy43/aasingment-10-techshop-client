@@ -33,15 +33,20 @@ const ShowDetails = () => {
   
   return (
 
-    <div>
-      <h1>show deatils here</h1>
+    <div className=" mt-6 mb-6">
+      
       {showDetails ? (
-        <div className="card card-side bg-base-100 shadow-xl">
+        <div className="card card-side bg-[#8d95e8] p-2 shadow-xl">
           <figure>
-            <img src={showDetails.photo} alt={showDetails.title} />
+            <img src={showDetails.photo}  />
           </figure>
           <div className="card-body">
             <h2 className="card-title">{showDetails.title}</h2>
+            <div className="badge badge-secondary lowercase"> {showDetails.name}</div>
+      <div className="badge badge-outline bg-[#152747]">{showDetails.category}</div> 
+
+      <div className="badge badge-secondary lowercase">Price: {showDetails.price}$</div>
+    
             <p>{showDetails.description}</p>
             <div className="card-actions justify-end">
             <button className="btn btn-primary" onClick={handleShowCardData}>Add to curt</button>

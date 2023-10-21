@@ -42,7 +42,7 @@ const Handesign=e=>{
       'success'
     );
   } 
-  // NAVIGATE
+  // ------------NAVIGATE-----------------
   
   navigate(location?.state?location.state:'/');
 })
